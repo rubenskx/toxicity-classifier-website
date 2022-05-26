@@ -1,0 +1,53 @@
+<!doctype html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/toxicity"></script>
+   
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nunito:wght@300&family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<nav>
+        <a href="https://github.com/tensorflow/tfjs-models/tree/master/toxicity">Docs</a>   
+</nav>
+    <div class="container">
+                <h1>Toxicity Classifier</h1>
+    <form>
+
+        <label for="content">Enter a sentence:</label>
+        <input type="text" id="content" placeholder="i.e 'you suck!'"><br>
+        
+    </form>
+    <button id="submit" class="int-buttons" onclick="predict()">Submit</button>
+    <button id="cleanScreen"  class="int-buttons" onclick="cleanScreen()">Clear</button>
+<div id="loading-message" style="display: none;" >
+    Loading   
+    <div id="loader">
+    </div>
+</div>
+    <div id="output">
+    </div>
+
+    <div id="count-message" style="display: none;">
+        
+    </div>
+
+
+    <div class="tags">
+          <p>
+            <div id="identity attack" style="display: none;" class="outputs">identity attack</div>
+            <div id="obscene" style="display: none;" class="outputs">obscene</div>
+            <div id="insult" style="display: none;" class="outputs">insult</div>
+            <div id="severe toxicity" style="display: none;" class="outputs">severe toxicity</div>
+            <div id="sexual explicit" style="display: none;" class="outputs">sexual explicit</div>
+            <div id="threat" style="display: none;" class="outputs">threat</div>
+            <div id="toxicity" style="display: none;" class="outputs">toxicity</div>
+    </p>
+    </div>
+</div>
+ <script src="script.js"> </script>
+</body>
+
+</html>
